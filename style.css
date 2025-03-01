@@ -12,9 +12,9 @@
   --theame4: #3f4d68;
   --heading: #3e3e45;
   --paragraph: #121212;
-  --navbar_link: #f4f8fb;
+  --navbar_link: #000000;
   --navbar_heading: #2ebdb0;
-  --sidebar: #3f4d68;
+  --sidebar: #9a9a9a;
   --contain: #ffffff;
   --button: #2ebdb0;
   --hover: #2ebdb0;
@@ -226,6 +226,47 @@ a {
 .rotated {
   transform: rotate(180deg);
 }
+.dark-mode {
+  background: #121212;
+  color: #ffffff;
+}
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto; /* Push to bottom */
+}
+.toggle-switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.toggle-switch::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  top: 1px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+.dark-mode .toggle-switch {
+  background: #666;
+}
+.dark-mode .toggle-switch::before {
+  transform: translateX(20px);
+}
+.dark-mode .sidebar{
+  background: #222;
+}
+.dark-mode .sidebar ul li a{
+  color: #fff;
+} 
 /*********************** content part *********************/
 
 /********************************************************************************************************************************************************/
