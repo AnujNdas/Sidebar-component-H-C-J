@@ -55,6 +55,8 @@ body {
   padding: 1.5rem 0rem;
   background-color: var(--sidebar);
   color: white;
+  transition: width 0.3s ease;
+  position: relative;
 }
 
 .contain {
@@ -187,13 +189,9 @@ a {
 .company_name h1 {
   color: var(--navbar_heading);
 }
-.sidebar {
-  width: 250px;
-  transition: width 0.3s ease;
-  position: relative;
-}
+
 .collapsed {
-  width: 60px;
+  width: 4%;
 }
 .menu_link .nav_link a {
   display: flex;
@@ -202,13 +200,23 @@ a {
 .collapsed .nav_text{
   display: none;
 }
+.menubar {
+  flex-grow: 1; /* Automatically takes the remaining space */
+  background: var(--); /* Just for visibility */
+  height: 8%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar.collapsed + .menubar {
+  margin-left: 0; /* Keep it in place */
+}
 .collapsed .menu_link .nav_link a {
   justify-content: center;
 }
 .toggle-btn {
   position: absolute;
   right: -15px;
-  top: 10%;
+  top: 12%;
   font-size: 18px;
   font-weight: 500;
   transform: translateY(-50%);
@@ -233,8 +241,9 @@ a {
 .toggle-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  margin-top: auto; /* Push to bottom */
+  /* margin-top: auto; Push to bottom */
 }
 .toggle-switch {
   position: relative;
@@ -264,9 +273,40 @@ a {
 .dark-mode .sidebar{
   background: #222;
 }
+/* .dark-mode .menubar{
+  background: #222;
+} */
+
 .dark-mode .sidebar ul li a{
   color: #fff;
 } 
+/******************** Menubar *******************/
+.menubar{
+  width: 85%;
+  height: 15%;
+  /* background: var(--sidebar); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  color: rgb(0, 0, 0);
+}
+.search-bar input {
+  padding: 8px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.icons ion-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
 /*********************** content part *********************/
 
 /********************************************************************************************************************************************************/
