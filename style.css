@@ -6,15 +6,15 @@
 /*************************** colour part ************************/
 :root {
   --body: #f4f8fb;
-  --theame1: #f4f8fb;
+  --theame1: #eaebed;
   --theame2: #ffffff;
   --theame3: #b6b5ea;
   --theame4: #3f4d68;
-  --heading: #3e3e45;
+  --heading: #5a54b4;
   --paragraph: #121212;
   --navbar_link: #000000;
-  --navbar_heading: #2ebdb0;
-  --sidebar: #9a9a9a;
+  --navbar_heading: #ffffff;
+  --sidebar: #ffffff;
   --contain: #ffffff;
   --button: #2ebdb0;
   --hover: #2ebdb0;
@@ -52,19 +52,37 @@ body {
 .sidebar {
   width: 15%;
   height: 100%;
-  padding: 1.5rem 0rem;
+  /* padding: 1.5rem 0rem; */
   background-color: var(--sidebar);
   color: white;
   transition: width 0.3s ease;
   position: relative;
 }
-
+.main-component{
+  flex-grow: 1; /* Automatically takes the remaining space */
+  background: var(--); /* Just for visibility */
+  /* height: 8%; */
+  transition: margin-left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
 .contain {
-  width: 85%;
-  height: 100%;
+  width: 100%;
+  height: 92%;
   padding: 1.5rem 0rem;
-  /* background-color: red; */
-  color: var(--paragraph);
+  background-color: var(--theame1);
+  /* color: var(--paragraph); */
+}
+.menubar {
+  background: var(--sidebar); /* Just for visibility */
+  height: 12%;
+  width: 100%;
+  transition: margin-left 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  color: rgb(0, 0, 0);
 }
 
 section {
@@ -166,7 +184,7 @@ a {
   
 }
 .sidebar ul li a:hover {
-  background-color: var(--hover);
+  background-color: var(--theame1);
 }
 
 .nav_link a ion-icon {
@@ -177,8 +195,9 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* background-color: red; */
+  background-color: var(--heading);
   padding: 2rem 0;
+  height: 12%;
 }
 
 .company_logo img {
@@ -191,7 +210,7 @@ a {
 }
 
 .collapsed {
-  width: 4%;
+  width: 5%;
 }
 .menu_link .nav_link a {
   display: flex;
@@ -200,17 +219,19 @@ a {
 .collapsed .nav_text{
   display: none;
 }
-.menubar {
-  flex-grow: 1; /* Automatically takes the remaining space */
-  background: var(--); /* Just for visibility */
-  height: 8%;
-  transition: margin-left 0.3s ease-in-out;
-}
 
-.sidebar.collapsed + .menubar {
+
+.sidebar.collapsed + .main-component {
   margin-left: 0; /* Keep it in place */
 }
-.collapsed .menu_link .nav_link a {
+.sidebar.collapsed .toggle-switch {
+  width: 45%;
+  overflow: hidden;
+}
+.sidebar.collapsed .toggle-container{
+  gap: 35px;
+}
+.collapsed .menu_link .nav_link a{
   justify-content: center;
 }
 .toggle-btn {
@@ -242,11 +263,13 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  /* margin-top: auto; Push to bottom */
+  gap: 45px;
+  width: 100%;
+  margin-top: 130px;
+  padding: 1rem;
 }
 .toggle-switch {
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 20px;
   background: #ccc;
@@ -273,24 +296,18 @@ a {
 .dark-mode .sidebar{
   background: #222;
 }
-/* .dark-mode .menubar{
+.dark-mode .menubar{
   background: #222;
-} */
+}
 
 .dark-mode .sidebar ul li a{
   color: #fff;
 } 
+.dark-mode .icons ion-icon {
+  color: #fff;
+} 
 /******************** Menubar *******************/
-.menubar{
-  width: 85%;
-  height: 15%;
-  /* background: var(--sidebar); */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-  color: rgb(0, 0, 0);
-}
+
 .search-bar input {
   padding: 8px;
   width: 200px;
