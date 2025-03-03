@@ -78,7 +78,7 @@
     </style>
 </head>
 <body>
-    <div class="setting-container">
+    <div class="setting-container" id="setting-container">
         <aside class="setting-sidebar">
             <ul>
                 <li onclick="showTab('user-settings')">User Settings</li>
@@ -114,13 +114,5 @@
             </section>
         </main>
     </div>
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.settings-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
 </body>
 </html>
