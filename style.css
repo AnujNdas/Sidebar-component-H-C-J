@@ -313,12 +313,18 @@ a {
 .dark-mode .contain{
   background: #2c2c2c;
 }
+.dark-mode .setting-sidebar ul li:hover{
+  background: #565656;
+  color: #ffffff;
+  border-bottom: 2px solid white;
+}
 
 .dark-mode .sidebar ul li a{
   color: #ffffff;
 } 
 .dark-mode .sidebar ul li a:hover {
-  color: #000000;
+  background: #2c2c2c;
+  color: #ffffff;
 }
 .dark-mode .icons ion-icon {
   color: #fff;
