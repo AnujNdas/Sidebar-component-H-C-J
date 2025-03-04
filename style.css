@@ -86,7 +86,7 @@ body {
   padding: 10px 40px;
   color: rgb(0, 0, 0);
 }
-#settings-container{
+#setting-container{
   width: 90%;
 }
 section {
@@ -313,10 +313,16 @@ a {
 .dark-mode .contain{
   background: #2c2c2c;
 }
+.dark-mode .product-container{
+  background: #222;
+}
 .dark-mode .setting-sidebar ul li:hover{
   background: #565656;
   color: #ffffff;
   border-bottom: 2px solid white;
+}
+.dark-mode table thead th{
+  background: #2c2c2c;
 }
 
 .dark-mode .sidebar ul li a{

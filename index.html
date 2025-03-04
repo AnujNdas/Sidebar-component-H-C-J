@@ -28,7 +28,7 @@
                 </div>
             </div>
             <ul class="menu_link">
-                <li class="nav_link">
+                <li class="nav_link" onclick="loadPage2('Product.html')">
                     <a href="#">
                         <div class="link_icon_wrraper">
                             <ion-icon name="home-outline" class="icon"></ion-icon>
@@ -99,7 +99,7 @@
                   </a>
                 </li>
                 <li class="nav_link" >
-                  <a href="#">
+                  <a href="#" id="productPageLink">
                     <div class="link_icon_wrraper">
                       <ion-icon name="bag-handle-outline"></ion-icon>
                     </div>
@@ -108,8 +108,8 @@
                     </div>
                   </a>
                 </li>
-                <li class="nav_link" onclick="loadPage('setting.html')">
-                  <a href="#">
+                <li class="nav_link">
+                  <a href="#" id="settingsPageLink">
                     <div class="link_icon_wrraper">
                       <ion-icon name="settings-outline"></ion-icon>
                     </div>
@@ -144,8 +144,9 @@
         </div>
         <!------------------------- sidebar end section ----------------------->
         <!----------------------- contain start section --------------------->
-        <div class="contain">
+        <div class="contain" id="contain">
             <div id="settings-container"></div>
+            <div id="product-container"></div>
         </div>
         </div>
         
