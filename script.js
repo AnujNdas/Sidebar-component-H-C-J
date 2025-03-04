@@ -38,9 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("settingsPageLink").addEventListener("click", function () {
         loadPage("setting.html");
     });
+    document.getElementById("vendorPageLink").addEventListener("click", function () {
+        loadPage("vendor.html");
+    });
 });
 
 
+// Navigation for the setting page 
     function showTab(tabId) {
         // Hide all settings sections
         document.querySelectorAll('.settings-section').forEach(section => {
@@ -104,4 +108,20 @@ document.addEventListener("DOMContentLoaded", function () {
         // Run the function after a delay to ensure dynamic content is loaded
         setTimeout(loadProducts, 500);
     });
+
+
+
+// navigation for the vendor page 
+    function showSection(sectionId) {
+        let sections = document.querySelectorAll('.content-wrapper');
+        sections.forEach(section => section.style.display = 'none');
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function buyNow() {
+        alert("Thank you for your purchase!");
+    }
+
+    // Show the products section by default
+    showSection('products');
     
